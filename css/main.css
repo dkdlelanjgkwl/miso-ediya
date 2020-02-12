@@ -1,0 +1,35 @@
+header {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+}
+.header-nav__menu{
+    
+}
+
+/* main 메뉴 */
+.main-juice{
+    margin: 0 auto;
+    width: 95%;
+}
+
+.main-juice-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.main-juice-container__item{
+    width: 50%;
+}
+
+.main-juice-container__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .main-juice__front>button>:nth-child(2){
+    display: block;
+} */
