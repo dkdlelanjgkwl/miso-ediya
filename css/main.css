@@ -69,7 +69,9 @@ main{
 
 .main-juice-container__item{
     width: 48%;
+    position: relative;
 }
+/* 앞면 */
 .main-juice__front>button {
     width: 100%;
     background: hsla(0, 0%, 96%, 1);
@@ -81,4 +83,41 @@ main{
 .main-juice__front>button>span {
     display: block;
     font-size: 1.8rem;
+    padding-bottom: 2rem;
+}
+/* 뒷면 */
+.main-juice__back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 0 2rem;
+    background: hsla(0, 0%, 100%, 0.6);
+
+}
+.main-juice__back-item {
+    padding: 0 2rem ;
+}
+.main-juice__back-item.up>dt{
+    padding-bottom: 2rem;
+    font-size: 1.8rem;
+    color: hsla(67deg, 3%, 13%, 1);
+    border-bottom: 2px solid hsla(67deg, 4%, 13%, 1);
+
+}
+.main-juice__back-item.up>dt>span:last-child {
+    font-size: 1.4rem;
+    color: hsla(0, 0%, 45%, 1);
+
+}
+.main-juice__back-item.up>dt>span{
+    display: block;
+}
+.main-juice__back-item.up>dd {
+    font-size: 1.6rem;
+    color: hsla(0, 0, 0, 1);
+    padding-top: 2rem;
+}
+.main-juice__back-item.down {
+    background: hsla(0, 0%, 97%, 1);
 }
