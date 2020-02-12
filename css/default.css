@@ -13,7 +13,11 @@ button{
     padding:0;
     border:unset;
     background-color: transparent;
+<<<<<<< HEAD
     color:inherit;
+=======
+    cursor: inherit;
+>>>>>>> 1e98c3596322be405971404f17e9f2d3e26626ae
     cursor: pointer;
 }
 ul{
@@ -24,6 +28,10 @@ ul{
 a{
     color:inherit;
     text-decoration: none;
+<<<<<<< HEAD
+=======
+    color:inherit;
+>>>>>>> 1e98c3596322be405971404f17e9f2d3e26626ae
 }
 dl,
 dt,
