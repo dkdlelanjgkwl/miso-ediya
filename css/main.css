@@ -1,0 +1,47 @@
+body{
+    position: relative;
+}
+
+/* 헤더 */
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    background-color: tomato;
+}
+
+/* 로고 */
+.header__logo{
+    margin:1rem;
+}
+
+.header__logo a,
+.header__logo img{
+    display:block;
+}
+
+/* 네비게이션 */
+.header-nav__button.open{
+    margin:1rem;
+}
+
+.heder-nav__menu{
+    position:fixed;
+    top:0;
+    right:0;
+    width:80%;
+    background-color: hsla(225, 57%, 10%, 0.9);
+    transform: translateX(0);
+}
+
+.heder-nav__menu li{
+    font-size: 1.6rem;
+    border-bottom:1px solid hsla(225, 57%, 30%, 0.5);
+}
+
+.heder-nav__menu a{
+    color:hsla(0, 0%, 100%, 1);
+}
