@@ -13,6 +13,7 @@ button{
     padding:0;
     border:unset;
     background-color: transparent;
+    cursor: inherit;
     cursor: pointer;
 }
 ul{
@@ -22,7 +23,7 @@ ul{
 }
 a{
     text-decoration: none;
-    color:hsla(0, 0%, 0%, 1);
+    color:inherit;
 }
 dl,
 dt,
