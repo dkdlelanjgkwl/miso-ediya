@@ -1,12 +1,38 @@
+/* 헤더 */
 header {
     display: flex;
     position: fixed;
     justify-content: space-between;
     width: 100%;
-    margin: 0 auto;
 }
+/* 로고 */
+.header__logo{
+    margin: 1rem;
+}
+.header__logo>a img,
+.header__logo>a {
+    display: block;
+}
+/* 네비게이션 */
+.header-nav__button.open{
+    margin: 1rem;
+}
+
 .header-nav__menu{
-    
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(0);
+    width: 100%;
+    background: hsla(225, 57%, 10%, 0.9);
+}
+.header-nav__menu>li{
+    font-size: 1.6rem;
+    border-bottom: 1px solid hsla(225, 57%, 30%, 0.5);
+}
+
+.header-nav__menu>li>a{
+    color: hsla(0, 0%, 100%, 1);
 }
 
 /* main 메뉴 */
