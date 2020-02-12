@@ -1,5 +1,36 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
+/* 에이젼트 속성 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin:0;
+}
+button{
+    padding:0;
+    border:unset;
+    background-color: transparent;
+    cursor: pointer;
+}
+ul{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color:hsla(0, 0%, 0%, 0);
+}
+dl,
+dt,
+dd{
+    margin:0;
+}
+
+/* 기본 문서 설정 */
 html {
     font-size: 10px;
 }
@@ -7,3 +38,4 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     color: hsla(0, 0%, 0%, 1);
 }
+
