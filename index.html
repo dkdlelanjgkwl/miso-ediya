@@ -1,50 +1,40 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="ko-kr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="image/favicon.ico">
     <script src="./js/main.js"></script>
-</head>
-<body>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="ko-kr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이디야</title>
-    <link rel="shortcut icon" href="./FDS15_Project-master/images/favicon.ico">
 </head>
 
 <body>
     <header>
         <h1 class="header__logo">
             <a href="main.html">
-                <img src="./FDS15_Project-master/images/ediya-logo.gif" alt="ediya">
+                <img src="image/ediya-logo.gif" alt="ediya">
             </a>
         </h1>
 
         <nav class="header-nav">
             <button class="header-nav__button">
-                <img src="./FDS15_Project-master/images/navigation-button.gif" alt="button">
+                <img src="image/navigation-button.gif" alt="button">
             </button>
 
-            <ul>
-                <li><button>메뉴</button></li>
-                <li><button>이디야 멤버스</button></li>
-                <li><button>이디야 커피랩</button></li>
-                <li><button>이디야 컬쳐랩</button></li>
-                <li><button>공지사항</button></li>
-                <li><button>매장찾기</button></li>
+            <ul class="heder-nav__menu">
+                <li><a>메뉴</a></li>
+                <li><a>이디야 멤버스</a></li>
+                <li><a>이디야 커피랩</a></li>
+                <li><a>이디야 컬쳐랩</a></li>
+                <li><a>공지사항</a></li>
+                <li><a>매장찾기</a></li>
             </ul>
 
             <button class="header-nav__button">
-                <img src="./FDS15_Project-master/images/detail-close.gif" alt="close">
+                <img src="image/detail-close.gif" alt="close">
             </button>
         </nav>
     </header>
@@ -54,25 +44,24 @@
 
         <section class="main-juice">
             <h3 class="a11y-hidden">이디야 음료</h3>
-            <ul>
-                <li>
-                    <h4 class="main-section">
+            <ul class="main-juice-container">
+                <li class="main-juice-container__item ice-cbl">
+                    <h4 class="main-juice__front">
                         <button>
-                            <img src="./FDS15_Project-master/images/iced-cherry-blossoms-latte.png"
-                                alt="iced-cherry-blossoms-latte">
+                            <img src="image/iced-cherry-blossoms-latte.png" alt="iced-cherry-blossoms-latte">
                             <span>ICED 벚꽃라떼</span>
                         </button>
                     </h4>
 
-                    <div class="뒷면">
-                        <dl>
+                    <div class="main-juice__back">
+                        <dl class="main-juice__back-item up">
                             <dt>
                                 <span>ICED 벚꽃라떼</span>
                                 <span>Cherry Blossom Latte</span></dt>
                             <dd>은은한 벚꽃향과 라즈베리 화이트 초콜릿 토핑이 올라간 핑크빛 라떼</dd>
                         </dl>
 
-                        <dl>
+                        <dl class="main-juice__back-item down">
                             <dt>칼로리</dt>
                             <dd>(393kcal)</dd>
                             <dt>당류</dt>
@@ -88,22 +77,21 @@
                         </dl>
 
                         <button type="button">
-                            <img src="./FDS15_Project-master/images/detail-close.gif" alt="close">
+                            <img src="image/detail-close.gif" alt="close">
                         </button>
                     </div>
                 </li>
 
-                <li>
-                    <h4 class="앞면">
+                <li class="main-juice-container__item hot-cbl">
+                    <h4 class="main-juice__front">
                         <button>
-                            <img src="./FDS15_Project-master/images/hot-cherry-blossoms-latte.png"
-                                alt="hot-cherry-blossoms-latte">
+                            <img src="image/hot-cherry-blossoms-latte.png" alt="hot-cherry-blossoms-latte">
                             <span>HOT 벚꽃라떼</span>
                         </button>
                     </h4>
 
-                    <div class="뒷면">
-                        <dl>
+                    <div class="main-juice__back">
+                        <dl class="main-juice__back-item up">
                             <dt>
                                 <span>HOT 벚꽃라떼</span>
                                 <span>Cherry Blossom Latte</span>
@@ -111,7 +99,7 @@
                             <dd>은은한 벚꽃향과 라즈베리 화이트 초콜릿 토핑이 올라간 핑크빛 라떼</dd>
                         </dl>
 
-                        <dl>
+                        <dl class="main-juice__back-item down">
                             <dt>칼로리</dt>
                             <dd>(143kal)</dd>
                             <dt>당류</dt>
@@ -127,22 +115,21 @@
                         </dl>
 
                         <button type="button">
-                            <img src="./FDS15_Project-master/images/detail-close.gif" alt="close">
+                            <img src="image/detail-close.gif" alt="close">
                         </button>
                     </div>
                 </li>
 
-                <li>
-                    <h4 class="앞면">
+                <li class="main-juice-container__item ice-choco">
+                    <h4 class="main-juice__front">
                         <button>
-                            <img src="./FDS15_Project-master/images/iced-brownie-chocolate.png"
-                                alt="iced-brownie-chocolate">
+                            <img src="image/iced-brownie-chocolate.png" alt="iced-brownie-chocolate">
                             <span>ICED 브라우니 쇼콜라</span>
                         </button>
                     </h4>
 
-                    <div class="뒷면">
-                        <dl>
+                    <div class="main-juice__back">
+                        <dl class="main-juice__back-item up">
                             <dt>
                                 <span>ICED 브라우니 쇼콜라</span>
                                 <span>Brownie Chocolate</span>
@@ -150,7 +137,7 @@
                             <dd>깊고 진한 초콜릿의 맛에 부드러운 휘핑크림과 브라우니를 함께 어울러져 고급스러운 디저트 같은 초콜릿 음료</dd>
                         </dl>
 
-                        <dl>
+                        <dl class="main-juice__back-item down">
                             <dt>칼로리</dt>
                             <dd>(503kal)</dd>
                             <dt>당류</dt>
@@ -166,30 +153,29 @@
                         </dl>
 
                         <button type="button">
-                            <img src="./FDS15_Project-master/images/detail-close.gif" alt="close">
+                            <img src="image/detail-close.gif" alt="close">
                         </button>
                     </div>
                 </li>
 
-                <li>
-                    <h4 class="앞면">
+                <li class="main-juice-container__item hot-choco">
+                    <h4 class="main-juice__front">
                         <button>
-                            <img src="./FDS15_Project-master/images/hot-brownie-chocolate.png"
-                                alt="hot-brownie-chocolate">
+                            <img src="image/hot-brownie-chocolate.png" alt="hot-brownie-chocolate">
                             <span>HOT 브라우니 쇼콜라</span>
                         </button>
                     </h4>
 
-                    <div class="뒷면">
-                        <dl>
+                    <div class="main-juice__back">
+                        <dl class="main-juice__back-item up">
                             <dt>
                                 <span>HOT 브라우니 쇼콜라</span>
                                 <span>Brownie Chocolate</span>
                             </dt>
                             <dd>깊고 진한 초콜릿의 맛에 부드러운 휘핑크림과 브라우니를 함께 어울러져 고급스러운 디저트 같은 초콜릿 음료</dd>
                         </dl>
-
-                        <dl>
+                        
+                        <dl class="main-juice__back-item down">
                             <dt>칼로리</dt>
                             <dd>(503kal)</dd>
                             <dt>당류</dt>
@@ -205,22 +191,21 @@
                         </dl>
 
                         <button type="button">
-                            <img src="./FDS15_Project-master/images/detail-close.gif" alt="close">
+                            <img src="image/detail-close.gif" alt="close">
                         </button>
                     </div>
                 </li>
 
-                <li>
-                    <h4 class="앞면">
+                <li class="main-juice-container__item tanger-tea">
+                    <h4 class="main-juice__front">
                         <button>
-                            <img src="./FDS15_Project-master/images/jeju-green-tangerine-tea.png"
-                                alt="jeju-green-tangerine-tea">
+                            <img src="image/jeju-green-tangerine-tea.png" alt="jeju-green-tangerine-tea">
                             <span>제주청귤 오리지널</span>
                         </button>
                     </h4>
 
-                    <div class="뒷면">
-                        <dl>
+                    <div class="main-juice__back">
+                        <dl class="main-juice__back-item up">
                             <dt>
                                 <span>제주청귤 오리지널</span>
                                 <span>Jeju Green Tangerine Tea</span>
@@ -228,7 +213,7 @@
                             <dd>청정 제주지역에서 자라난 귀한 청귤의 풍부한 과육을 맛볼 수 있는 새콤달콤한 홈메이드 스타일 과일차</dd>
                         </dl>
 
-                        <dl>
+                        <dl class="main-juice__back-item down">
                             <dt>칼로리</dt>
                             <dd>(218kal)</dd>
                             <dt>당류</dt>
@@ -242,24 +227,22 @@
                             <dt>카페인</dt>
                             <dd>(0mg)</dd>
                         </dl>
-
                         <button type="button">
-                            <img src="./FDS15_Project-master/images/detail-close.gif" alt="close">
+                            <img src="image/detail-close.gif" alt="close">
                         </button>
                     </div>
                 </li>
 
-                <li>
-                    <h4 class="앞면">
+                <li class="main-juice-container__item tanger-bloss">
+                    <h4 class="main-juice__front">
                         <button>
-                            <img src="./FDS15_Project-master/images/jeju-green-tangerine-blossom.png"
-                                alt="jeju-green-tangerine-blossom">
+                            <img src="image/jeju-green-tangerine-blossom.png" alt="jeju-green-tangerine-blossom">
                             <span>제주청귤 블라썸</span>
                         </button>
                     </h4>
 
-                    <div class="뒷면">
-                        <dl>
+                    <div class="main-juice__back">
+                        <dl class="main-juice__back-item up">
                             <dt>
                                 <span>제주청귤 블라썸</span>
                                 <span>Jeju Green Tangerine Blossom</span>
@@ -267,7 +250,7 @@
                             <dd>청귤의 새콤함이 복숭아, 포도 등의 다양한 과일향과 함께 어우러져 밸런스가 훌륭한 블렌딩티</dd>
                         </dl>
 
-                        <dl>
+                        <dl class="main-juice__back-item down">
                             <dt>칼로리</dt>
                             <dd>(202kal)</dd>
                             <dt>당류</dt>
@@ -283,21 +266,21 @@
                         </dl>
 
                         <button type="button">
-                            <img src="./FDS15_Project-master/images/detail-close.gif" alt="close">
+                            <img src="image/detail-close.gif" alt="close">
                         </button>
                     </div>
                 </li>
 
-                <li>
-                    <h4 class="앞면">
+                <li class="main-juice-container__item pome-tea">
+                    <h4 class="main-juice__front">
                         <button>
-                            <img src="./FDS15_Project-master/images/pomegranate-tea.png" alt="pomegranate-tea">
+                            <img src="image/pomegranate-tea.png" alt="pomegranate-tea">
                             <span>석류 오리지널</span>
                         </button>
                     </h4>
 
-                    <div class="뒷면">
-                        <dl>
+                    <div class="main-juice__back">
+                        <dl class="main-juice__back-item up">
                             <dt>
                                 <span>석류 오리지널</span>
                                 <span>Pomegranate Tea</span>
@@ -305,7 +288,7 @@
                             <dd>석류 특유의 산뜻한 향과 깔끔한 뒷맛이 느껴지며, 과육이 한알 한알 살아있는 붉은 빛의 매력적인 과일차</dd>
                         </dl>
 
-                        <dl>
+                        <dl class="main-juice__back-item down">
                             <dt>칼로리</dt>
                             <dd>(210kal)</dd>
                             <dt>당류</dt>
@@ -321,22 +304,21 @@
                         </dl>
 
                         <button type="button">
-                            <img src="./FDS15_Project-master/images/detail-close.gif" alt="close">
+                            <img src="image/detail-close.gif" alt="close">
                         </button>
                     </div>
                 </li>
 
-                <li>
-                    <h4 class="앞면">
+                <li class="main-juice-container__item pome-apple">
+                    <h4 class="main-juice__front">
                         <button>
-                            <img src="./FDS15_Project-master/images/pomegranate-apple-lime.png"
-                                alt="pomegranate-apple-lime">
+                            <img src="image/pomegranate-apple-lime.png" alt="pomegranate-apple-lime">
                             <span>석류 애플라임</span>
                         </button>
                     </h4>
 
-                    <div class="뒷면">
-                        <dl>
+                    <div class="main-juice__back">
+                        <dl class="main-juice__back-item up">
                             <dt>
                                 <span>석류 애플라임</span>
                                 <span>Pomegranate Apple Lime</span>
@@ -344,7 +326,7 @@
                             <dd>산뜻한 석류에 다양한 과일과 꽃, 그리고 샴페인의 향이 더해져 보다 깊고 중후한 맛이 느껴지는 블렌딩티</dd>
                         </dl>
 
-                        <dl>
+                        <dl class="main-juice__back-item down">
                             <dt>칼로리</dt>
                             <dd>(220kal)</dd>
                             <dt>당류</dt>
@@ -360,14 +342,12 @@
                         </dl>
 
                         <button type="button">
-                            <img src="./FDS15_Project-master/images/detail-close.gif" alt="close">
+                            <img src="image/detail-close.gif" alt="close">
                         </button>
                     </div>
                 </li>
-
             </ul>
         </section>
     </main>
 </body>
-
 </html>
