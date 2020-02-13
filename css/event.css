@@ -1,0 +1,19 @@
+/* hover 이벤트 */
+.main-juice__front button img{
+    transition: 0.2s ease-in-out;
+}
+.main-juice__front button:hover img{
+    transform: scale(1.12);
+}
+
+/* 메인 리스트 이벤트 */
+.main-juice__front button{
+    z-index:1;
+    position: relative;
+}
+.main-juice__back{
+    z-index:0;
+}
+.main-juice__front button.active {
+    z-index: -1;
+}
