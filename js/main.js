@@ -1,10 +1,9 @@
-const navi = document.querySelector('.navigation');
-const naviBtn = navi.querySelectorAll('.navi-button'); // navi 버튼 목록
-const naviMenu = navi.querySelector('.nav-menu'); // ul 목록
-const section = document.querySelector('.section');
-const detail__open = section.querySelectorAll('.detail--open');
-const detail__close = section.querySelectorAll('.detail--close');
-// const menu = naviMenu.childElements;
+const navi = document.querySelector('.header-nav'); // nav
+const naviBtn = doucument.querySelectorAll('.header-nav__button'); // navi 버튼 목록
+const naviMenu = navi.querySelector('.header-nav__menu'); // ul 목록
+const section = document.querySelector('.main-juice');
+const detail__open = section.querySelectorAll('.juice__front'); // 앞면 h4전체구역
+const detail__close = section.querySelectorAll('.juice__back-btn'); // 뒷면 닫기버튼
 
 window.addEventListener('load',function(e){
     e.preventDefault;
