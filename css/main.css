@@ -1,12 +1,12 @@
 /* 헤더 */
 header {
     z-index: 5;
-    display: flex;
     position: fixed;
+    display: flex;
     justify-content: space-between;
     width: 100%;
     border-bottom: 1px solid hsla(0, 0%, 71%, 1);
-    background-color: hsla(0, 0%, 100%, 0.8);
+    background: hsla(0, 0%, 100%, 0.8);
 }
 /* 로고 */
 .header__logo {
@@ -18,7 +18,7 @@ header {
 }
 /* 네비게이션 */
 .header-nav__button.open{
-    margin: 1rem;
+    padding: 0.8rem;
 }
 .header-nav__menu {
     position: fixed;
@@ -37,10 +37,6 @@ header {
 .header-nav__menu>li>a {
     display: block;
     padding: 1rem 2rem ;
-}
-.header-nav__menu>li>a:hover,
-.header-nav__menu>li>a:focus {
-    background: hsla(224deg, 46%, 33%, 1);
 }
 .header-nav__button.close{
     position: absolute;
@@ -70,7 +66,6 @@ main{
     position: relative;
     margin-bottom: 2rem;
     width: 48%;
-    
 }
 /* 앞면 */
 .main-juice__front>button {
