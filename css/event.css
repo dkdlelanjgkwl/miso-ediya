@@ -1,0 +1,93 @@
+/* 헤더 효과 */
+header {
+    animation-name:header;
+    animation-duration: 0.2s;
+    animation-fill-mode: both;
+}
+@keyframes header{
+    from{ 
+          height: 0rem;
+    }
+    to{
+        height: 4rem;
+    }
+}
+
+.header__logo,
+.header-nav {
+    animation-name: ef;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+@keyframes ef{
+    from{
+        transform:translateX(2rem);
+        opacity: 0%;
+    }
+    to{
+        transform:translateX(0rem);
+        opacity: 100%;
+    }
+}
+
+/* 네비 버튼에 배경효과 */
+.header-nav__button:hover{
+    background: hsla(0, 0%, 90%, 1);
+}
+
+.header-nav__menu>li>a:hover,
+.header-nav__menu>li>a:focus {
+    background: hsla(224deg, 46%, 33%, 1);
+}
+/* 메인 효과 */
+.main-juice-container__item{
+    animation-name: item;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+@keyframes item {
+    from{
+        opacity: 0%;
+        transform: translateY(5rem);
+    }
+    to{
+        opacity: 100%;
+        transform: translateY(0rem);
+    }
+}
+.ice-cbl{
+    animation-delay: 1s;
+}
+.hot-cbl {
+    animation-delay: 1.25s;
+}
+.ice-choco {
+    animation-delay: 1.5s;
+}
+.hot-choco {
+    animation-delay: 1.75s;
+}
+.tanger-tea {
+    animation-delay: 2s;
+}
+.tanger-bloss {
+    animation-delay: 2.25s;
+}
+.pome-tea {
+    animation-delay: 2.5s;
+}
+.pome-apple {
+    animation-delay: 2.75s;
+}
+/* img에 hover했을때 커지기 */
+.main-juice__front>button>img {
+    transition: all linear .5s
+}
+
+.main-juice__front>button>img:hover {
+    transform: scale(1.06);
+}
+.main-juice__back>button:hover {
+    background: hsla(0, 0%, 90%, 1);
+}
