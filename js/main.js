@@ -1,5 +1,5 @@
 const navi = document.querySelector('.header-nav'); // nav
-const naviBtn = doucument.querySelectorAll('.header-nav__button'); // navi 버튼 목록
+const naviBtn = navi.querySelectorAll('.header-nav__button'); // navi 버튼 목록
 const naviMenu = navi.querySelector('.header-nav__menu'); // ul 목록
 const section = document.querySelector('.main-juice');
 const detail__open = section.querySelectorAll('.juice__front'); // 앞면 h4전체구역
