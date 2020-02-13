@@ -20,19 +20,17 @@ header {
 .header-nav__button.open{
     padding: 0.8rem;
 }
-
 .header-nav__menu {
     position: fixed;
     top: 0;
-    right: 0;
-    transform: translateX(100%);
+    right: 0;   
     width: 100%;
     height: 100%;
     padding-top: 8rem;
     background: hsla(225deg, 57%, 10%, 0.9);
 }
 .header-nav__menu>li {
-    border-bottom: 1px solid hsla(225, 57%, 30%, 0.5);
+    border-bottom: 1px solid hsla(225deg, 57%, 30%, 0.5);
     color: hsla(0, 0%, 100%, 1);
     font-size: 1.6rem;
 }
@@ -64,7 +62,6 @@ main{
     flex-flow: row wrap;
     justify-content: space-between;
 }
-
 .main-juice-container__item{
     position: relative;
     margin-bottom: 2rem;
@@ -126,7 +123,8 @@ main{
 .main-juice__back-item.down {
     display: flex;
     flex-flow: row wrap;
-    height: 30%;
+    max-height: 30%;
+    overflow-y: auto;
     background: hsla(0, 0%, 97%, 1);
     font-size: 1.3rem;
     color: hsla(0, 0%, 0%, 1);
@@ -140,6 +138,10 @@ main{
 }
 .main-juice__back-item.down>dt {
     padding-left: 2rem;
+}
+/* 추가 */
+.main-juice__back-item.down>dd {
+    word-break: break-word;
 }
 .main-juice__back-item.down>:nth-child(3),
 .main-juice__back-item.down>:nth-child(4),

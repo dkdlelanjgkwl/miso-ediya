@@ -1,38 +1,6 @@
-/* 헤더 효과 */
-header {
-    animation-name:header;
-    animation-duration: 0.2s;
-    animation-fill-mode: both;
-}
-@keyframes header{
-    from{ 
-          height: 0rem;
-    }
-    to{
-        height: 4rem;
-    }
-}
-
-.header__logo,
-.header-nav {
-    animation-name: ef;
-    animation-duration: 0.5s;
-    animation-delay: 0.5s;
-    animation-fill-mode: both;
-}
-@keyframes ef{
-    from{
-        transform:translateX(2rem);
-        opacity: 0%;
-    }
-    to{
-        transform:translateX(0rem);
-        opacity: 100%;
-    }
-}
-
+/* hover 이벤트 */
 /* 네비 버튼에 배경효과 */
-.header-nav__button:hover{
+.header-nav__button:hover {
     background: hsla(0, 0%, 90%, 1);
 }
 
@@ -40,47 +8,8 @@ header {
 .header-nav__menu>li>a:focus {
     background: hsla(224deg, 46%, 33%, 1);
 }
-/* 메인 효과 */
-.main-juice-container__item{
-    animation-name: item;
-    animation-duration: 0.5s;
-    animation-fill-mode: both;
-}
-@keyframes item {
-    from{
-        opacity: 0%;
-        transform: translateY(5rem);
-    }
-    to{
-        opacity: 100%;
-        transform: translateY(0rem);
-    }
-}
-.ice-cbl{
-    animation-delay: 1s;
-}
-.hot-cbl {
-    animation-delay: 1.25s;
-}
-.ice-choco {
-    animation-delay: 1.5s;
-}
-.hot-choco {
-    animation-delay: 1.75s;
-}
-.tanger-tea {
-    animation-delay: 2s;
-}
-.tanger-bloss {
-    animation-delay: 2.25s;
-}
-.pome-tea {
-    animation-delay: 2.5s;
-}
-.pome-apple {
-    animation-delay: 2.75s;
-}
-/* img에 hover했을때 커지기 */
+
+/* 메인 카드 이미지 크기변화 */
 .main-juice__front>button>img {
     transition: all linear .5s
 }
@@ -88,6 +17,172 @@ header {
 .main-juice__front>button>img:hover {
     transform: scale(1.06);
 }
+/* 메인카드 닫기 버튼 배경효과 */
 .main-juice__back>button:hover {
     background: hsla(0, 0%, 90%, 1);
+}
+
+
+/* lord 이벤트 */
+/* 헤더 */
+header {
+    animation-name: header;
+    animation-duration: 0.2s;
+    animation-fill-mode: both;
+}
+
+@keyframes header {
+    from {
+        height: 0rem;
+    }
+
+    to {
+        height: 4rem;
+    }
+}
+
+.header__logo {
+    animation: startLogo 0.5s 0.5s both ease-in-out;
+}
+
+@keyframes startLogo {
+    0% {
+        transform: translateX(-110%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.header-nav__button.open {
+    animation: startNavBt 0.5s 0.5s both ease-in-out;
+}
+
+@keyframes startNavBt {
+    0% {
+        transform: translateX(150%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+/* 메인 효과 */
+.main-juice-container__item {
+    animation-name: item;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+@keyframes item {
+    from {
+        opacity: 0%;
+        transform: translateY(5rem);
+    }
+
+    to {
+        opacity: 100%;
+        transform: translateY(0rem);
+    }
+}
+
+.ice-cbl {
+    animation-delay: 1s;
+}
+
+.hot-cbl {
+    animation-delay: 1.25s;
+}
+
+.ice-choco {
+    animation-delay: 1.5s;
+}
+
+.hot-choco {
+    animation-delay: 1.75s;
+}
+
+.tanger-tea {
+    animation-delay: 2s;
+}
+
+.tanger-bloss {
+    animation-delay: 2.25s;
+}
+
+.pome-tea {
+    animation-delay: 2.5s;
+}
+
+.pome-apple {
+    animation-delay: 2.75s;
+}
+
+/* 클릭 이벤트 */
+/* 네비게이션 */
+/* 네비게이션 기본 */
+.header-nav__menu {
+    transform: translateX(100%);
+}
+
+/* 네비게이션 이벤트 */
+/* 네비게이션 열기 */
+.header-nav__menu.open {
+    animation: navMenuOpen 1s both ease-in-out;
+}
+
+@keyframes navMenuOpen {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* 네비게이션 닫기 */
+.header-nav__menu.close {
+    animation: navMenuClose 1s both ease-in-out;
+}
+
+@keyframes navMenuClose {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* 메인  */
+/* 카드 기본 */
+.main-juice__front {
+    z-index: 1;
+    position: relative;
+}
+
+.main-juice__back {
+    z-index: 0;
+}
+
+/* 카드 이벤트 */
+.main-juice-container__item:hover .main-juice__front {
+    z-index: -1;
+}
+
+.main-juice-container__item:hover .main-juice__back {
+    animation: cardEvent 1s ease-in-out;
+}
+
+@keyframes cardEvent {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
