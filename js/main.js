@@ -1,68 +1,57 @@
-const navi = document.querySelector('.navigation');
-const naviBtn = navi.querySelectorAll('.navi-button'); // navi 버튼 목록
-const naviMenu = navi.querySelector('.nav-menu'); // ul 목록
-const section = document.querySelector('.section');
-const detail__open = section.querySelectorAll('.detail--open');
-const detail__close = section.querySelectorAll('.detail--close');
-// const menu = naviMenu.childElements;
+const navi = document.querySelector('.header-nav'); // nav
+const naviBtn = navi.querySelectorAll('.header-nav__button'); // navi 버튼 목록
+const naviMenu = navi.querySelector('.header-nav__menu'); // ul 목록
+const juiceItem = document.querySelector('.main-juice'); // section 영역
+const detail__open = juiceItem.querySelectorAll('.main-juice__front'); // 앞면 h4전체구역(열기버튼)
+const detail__close = juiceItem.querySelectorAll('.juice__back-btn'); // 뒷면 닫기버튼
+const back = juiceItem.querySelectorAll('.main-juice__back'); // 뒷면 div
 
-window.addEventListener('load',function(e){
+window.addEventListener('load', function (e) {
     e.preventDefault;
     const keyCode = e.keyCode;
-    
-    if(keyCode == 13 || keyCode == 32 || 'click'){
+    if (keyCode == 13 || keyCode == 32 || 'click') {
         let a = 0;
-        
         // menu btn
-        addBtn: while(a<naviBtn.length){
+        addBtn: while (a < naviBtn.length) {
             const btn = naviBtn[a];
-            // console.log(menu)
-            // console.log(1)
-            // const menu = list[a];
-            // console.log(list)
-            btn.addEventListener('click',function(e){
-                if(naviMenu.classList.contains('visible')){
-                    // menu.setAttribute('tabindex', 0);
-                    naviMenu.classList.remove('visible');
-                }else {
-                    // menu.setAttribute('tabindex', -1);
+            btn.addEventListener('click', function (e) {
+                if (naviMenu.classList.contains('visible')) {
+                    naviMenu.classList.remove('visible')
+                    naviMenu.classList.add('hidden');
+                } else {
+                    naviMenu.classList.remove('hidden')
                     naviMenu.classList.add('visible');
-                    
+
                 }
             });
-            a = a+1;
+            a = a + 1;
         }
-
         // detail open
         a = 0;
-        addBtn: while(a<detail__open.length){
-            const btn = detail__open[a];
-            btn.addEventListener('click',function(e){
-                    if(btn.classList.contains('face--down') == false){
-                        btn.classList.add('face--down');
-                    }
+        addBtn: while (a < detail__open.length) {
+            const openBtn = detail__open[a];
+            const detail = back[a];
+            openBtn.addEventListener('click', function (e) {
+                if (detail.classList.contains('detail-open') == false) {
+                    detail.classList.remove('detail-close');
+                    detail.classList.add('detail-open');
+                }
             });
-            a = a+1;
+            a = a + 1;
         }
-
 
         // detail close
         a = 0;
-        addBtn: while(a<detail__close.length){
-            if(detail__close.length !== detail__open.length){
-                console.log('버튼의 개수가 맞지않습니다.')
-                break addBtn;
-            }
+        addBtn: while (a < detail__close.length) {
             const closeBtn = detail__close[a];
-            const pCloseBtn = closeBtn.parentElement;
-            const openBtn =  pCloseBtn.previousElementSibling;
-
-            closeBtn.addEventListener('click',function(e){
-                if(openBtn.classList.contains('face--down')){
-                    openBtn.classList.remove('face--down');
+            const detail = back[a];
+            closeBtn.addEventListener('click', function (e) {
+                if (detail.classList.contains('detail-open')) {
+                    detail.classList.remove('detail-open');
+                    detail.classList.add('detail-close');
                 }
             });
-            a = a+1;
+            a = a + 1;
         }
     }
 

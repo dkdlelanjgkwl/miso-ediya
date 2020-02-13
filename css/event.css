@@ -17,6 +17,7 @@
 .main-juice__front>button>img:hover {
     transform: scale(1.06);
 }
+
 /* 메인카드 닫기 버튼 배경효과 */
 .main-juice__back>button:hover {
     background: hsla(0, 0%, 90%, 1);
@@ -68,6 +69,7 @@ header {
         transform: translateX(0);
     }
 }
+
 /* 메인 효과 */
 .main-juice-container__item {
     animation-name: item;
@@ -128,7 +130,7 @@ header {
 
 /* 네비게이션 이벤트 */
 /* 네비게이션 열기 */
-.visiable {
+.header-nav__menu.visible {
     animation: navMenuOpen 1s both ease-in-out;
 }
 
@@ -143,7 +145,7 @@ header {
 }
 
 /* 네비게이션 닫기 */
-.hidden {
+.header-nav__menu.hidden {
     animation: navMenuClose 1s both ease-in-out;
 }
 
@@ -160,39 +162,44 @@ header {
 /* 메인  */
 /* 카드 기본 */
 .main-juice__front {
-    z-index: 0;
     position: relative;
 }
 
 .main-juice__back {
     z-index: -1;
-    opacity:0;
+    opacity: 0;
 }
 
 /* 카드 이벤트 */
 /* 나오기 */
 .detail-open {
     z-index: 1;
-    animation: cardEventO 1s both ease-in-out;
+    animation: cardEventO .5s both ease-in-out;
 }
+
 @keyframes cardEventO {
     0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
+
 /* 사라지기 */
 .detail-close {
-    animation: cardEventC 1s both ease-in-out;
+    animation: cardEventC .5s both ease-in-out;
 }
+
 @keyframes cardEventC {
     0% {
+        z-index: 1;
         opacity: 1;
     }
-    100%{
-        opacity: 0;
+
+    100% {
         z-index: -1;
+        opacity: 0;
     }
 }
