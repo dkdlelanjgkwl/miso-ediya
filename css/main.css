@@ -139,7 +139,6 @@ main{
 .main-juice__back-item.down>dt {
     padding-left: 2rem;
 }
-/* 추가 */
 .main-juice__back-item.down>dd {
     word-break: break-word;
 }

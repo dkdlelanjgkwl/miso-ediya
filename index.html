@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" media="screen and (max-width: 559px)" href="/css/small.css">
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js" defer></script>
 </head>
 
 <body>
@@ -47,7 +47,7 @@
             <h3 class="a11y-hidden">이디야 음료</h3>
             <ul class="main-juice-container">
                 <li class="main-juice-container__item ice-cbl">
-                    <h4 class="main-juice__front active">
+                    <h4 class="main-juice__front">
                         <button title="ICED 벛꽃라떼 자세히 보기">
                             <img src="image/iced-cherry-blossoms-latte.png" alt="ICED 벚꽃라떼 제품 이미지">
                             <span>ICED 벚꽃라떼</span>
@@ -66,8 +66,8 @@
                         <dl class="main-juice__back-item down">
                             <dt>칼로리</dt>
                             <dd>(393kcal)</dd>
-                            <dt class="second-line">당류</dt>
-                            <dd class="second-line">(35g)</dd>
+                            <dt>당류</dt>
+                            <dd>(35g)</dd>
                             <dt>단백질</dt>
                             <dd>(7g)</dd>
                             <dt>포화지방</dt>
@@ -78,7 +78,7 @@
                             <dd>(0mg)</dd>
                         </dl>
 
-                        <button type="button" title="내용 닫기">
+                        <button type="button" class="juice__back-btn" title="내용 닫기">
                             <img src="image/detail-close.gif" alt="">
                         </button>
                     </div>
@@ -92,7 +92,7 @@
                         </button>
                     </h4>
 
-                    <div class="main-juice__back">
+                    <div class="main-juice__back detail-close">
                         <dl class="main-juice__back-item up">
                             <dt>
                                 <span>HOT 벚꽃라떼</span>
@@ -116,7 +116,7 @@
                             <dd>(0mg)</dd>
                         </dl>
 
-                        <button type="button" title="내용 닫기">
+                        <button type="button" class="juice__back-btn" title="내용 닫기">
                             <img src="image/detail-close.gif" alt="">
                         </button>
                     </div>
@@ -154,7 +154,7 @@
                             <dd>(12mg)</dd>
                         </dl>
 
-                        <button type="button" title="내용 닫기">
+                        <button type="button" class="juice__back-button"  title="내용 닫기">
                             <img src="image/detail-close.gif" alt="">
                         </button>
                     </div>
@@ -192,11 +192,11 @@
                             <dd>(12mg)</dd>
                         </dl>
 
-                        <button type="button" title="내용 닫기">
+                        <button type="button" class="juice__back-btn" title="내용 닫기">
                             <img src="image/detail-close.gif" alt="">
                         </button>
                     </div>
-                </li>
+                </button>
 
                 <li class="main-juice-container__item tanger-tea">
                     <h4 class="main-juice__front">
@@ -229,7 +229,7 @@
                             <dt>카페인</dt>
                             <dd>(0mg)</dd>
                         </dl>
-                        <button type="button" title="내용 닫기">
+                        <button type="button" class="juice__back-btn" title="내용 닫기">
                             <img src="image/detail-close.gif" alt="">
                         </button>
                     </div>
@@ -267,7 +267,7 @@
                             <dd>(0mg)</dd>
                         </dl>
 
-                        <button type="button" title="내용 닫기">
+                        <button type="button" class="juice__back-btn" title="내용 닫기">
                             <img src="image/detail-close.gif" alt="">
                         </button>
                     </div>
@@ -305,7 +305,7 @@
                             <dd>(0mg)</dd>
                         </dl>
 
-                        <button type="button" title="내용 닫기">
+                        <button type="button" class="juice__back-btn" title="내용 닫기">
                             <img src="image/detail-close.gif" alt="">
                         </button>
                     </div>
@@ -343,7 +343,7 @@
                             <dd>(0mg)</dd>
                         </dl>
 
-                        <button type="button" title="내용 닫기">
+                        <button type="button" class="juice__back-btn" title="내용 닫기">
                             <img src="image/detail-close.gif" alt="">
                         </button>
                     </div>

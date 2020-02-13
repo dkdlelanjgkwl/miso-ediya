@@ -128,7 +128,7 @@ header {
 
 /* 네비게이션 이벤트 */
 /* 네비게이션 열기 */
-.header-nav__menu.open {
+.visiable {
     animation: navMenuOpen 1s both ease-in-out;
 }
 
@@ -143,7 +143,7 @@ header {
 }
 
 /* 네비게이션 닫기 */
-.header-nav__menu.close {
+.hidden {
     animation: navMenuClose 1s both ease-in-out;
 }
 
@@ -160,29 +160,39 @@ header {
 /* 메인  */
 /* 카드 기본 */
 .main-juice__front {
-    z-index: 1;
+    z-index: 0;
     position: relative;
 }
 
 .main-juice__back {
-    z-index: 0;
+    z-index: -1;
+    opacity:0;
 }
 
 /* 카드 이벤트 */
-.main-juice-container__item:hover .main-juice__front {
-    z-index: -1;
+/* 나오기 */
+.detail-open {
+    z-index: 1;
+    animation: cardEventO 1s both ease-in-out;
 }
-
-.main-juice-container__item:hover .main-juice__back {
-    animation: cardEvent 1s ease-in-out;
-}
-
-@keyframes cardEvent {
+@keyframes cardEventO {
     0% {
         opacity: 0;
     }
-
-    100% {
+    100%{
         opacity: 1;
+    }
+}
+/* 사라지기 */
+.detail-close {
+    animation: cardEventC 1s both ease-in-out;
+}
+@keyframes cardEventC {
+    0% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        z-index: -1;
     }
 }
