@@ -1,19 +1,106 @@
 /* hover 이벤트 */
+/* 앞면 이벤트 */
 .main-juice__front button img{
     transition: 0.2s ease-in-out;
 }
 .main-juice__front button:hover img{
-    transform: scale(1.12);
+    transform: scale(1.03);
+}
+/* 뒷면 이벤트 */
+.main-juice__back button:hover{
+    background-color: hsla(0, 0%, 96%, 1);
 }
 
-/* 메인 리스트 이벤트 */
-.main-juice__front button{
+/* lord 이벤트 */
+/* 헤더 */
+header{
+    animation: startHeader 0.5s both ease-in-out;
+}
+@keyframes startHeader{
+    0%{
+        height:0px;
+    }
+    100%{
+        height:5rem;
+    }
+}
+.header__logo{
+    animation: startLogo 0.5s 0.5s both ease-in-out;
+}
+@keyframes startLogo{
+    0%{
+        transform: translateX(-110%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.header-nav__button.open{
+    animation: startNavBt 0.5s 0.5s both ease-in-out;
+}
+@keyframes startNavBt{
+    0%{
+        transform: translateX(150%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/* 클릭 이벤트 */
+/* 네비게이션 */
+/* 네비게이션 기본 */
+.header-nav__menu{
+    transform: translateX(100%);
+}
+/* 네비게이션 이벤트 */
+/* 네비게이션 열기 */
+.header-nav__menu.open{
+    animation: navMenuOpen 1s both ease-in-out;
+}
+@keyframes navMenuOpen{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/* 네비게이션 닫기 */
+.header-nav__menu.close{
+    animation: navMenuClose 1s both ease-in-out;
+}
+@keyframes navMenuClose{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+/* 메인  */
+/* 카드 기본 */
+.main-juice__front{
     z-index:1;
     position: relative;
 }
 .main-juice__back{
     z-index:0;
 }
-.main-juice__front button.active {
+/* 카드 이벤트 */
+.main-juice-container__item:hover .main-juice__front {
     z-index: -1;
+}
+.main-juice-container__item:hover .main-juice__back{
+    animation: cardEvent 1s ease-in-out;
+}
+@keyframes cardEvent{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
 }

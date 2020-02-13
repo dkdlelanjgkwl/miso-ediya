@@ -1,10 +1,12 @@
 /* 헤더 */
 header {
+    z-index: 5;
     display: flex;
     position: fixed;
     justify-content: space-between;
     width: 100%;
     border-bottom: 1px solid hsla(0, 0%, 71%, 1);
+    background-color: hsla(0, 0%, 100%, 0.8);
 }
 /* 로고 */
 .header__logo {
@@ -18,12 +20,10 @@ header {
 .header-nav__button.open{
     margin: 1rem;
 }
-
 .header-nav__menu {
     position: fixed;
     top: 0;
-    right: 0;
-    transform: translateX(100%);
+    right: 0;   
     width: 100%;
     height: 100%;
     padding-top: 8rem;
@@ -48,20 +48,18 @@ header {
     right: 1rem;
     font-size: 3rem;
 }
-
 /* 메인 */
 main{
-    padding-top: 5rem;
-    margin: 0 auto;
+    margin: 0 auto; 
     width: 95%;
+    padding-top: 5rem;
 }
-
-/* 세션 주스 */
-.main-juice{
-    width:100%;
+/* 세션 쥬스 */
+.main-juice {
+    padding-top: 3rem;
+    width: 100%;
     max-width: 840px;
-    margin:0 auto;
-    padding-top:3rem;
+    margin: 0 auto;
 }
 .main-juice-container {
     display: flex;
@@ -70,102 +68,110 @@ main{
 }
 .main-juice-container__item{
     position: relative;
+    margin-bottom: 2rem;
     width: 48%;
-    margin-top: 3rem;
+    
 }
 /* 앞면 */
-.main-juice__front button{
-    width:100%;
-    background-color: hsla(0, 0%, 96%, 1);
+.main-juice__front>button {
+    width: 100%;
+    background: hsla(0, 0%, 96%, 1);
 }
-
-.main-juice__front img{
-    width:100%;
+.main-juice__front>button>img {
+    width: 100%;
     max-width: 328px;
 }
-
-.main-juice__front span{
-    display:block;
-    padding-bottom:2rem;
+.main-juice__front>button>span {
+    display: block;
+    padding-bottom: 2rem;
     font-size: 1.8rem;
 }
-
 /* 뒷면 */
 .main-juice__back{
     position: absolute;
-    top:0;
-    left:0;
-    display:flex;
-    flex-flow: column nowrap;
-    width:100%;
-    height:100%;
-    padding-top:4rem;
-    background-color: hsla(0,0%,100%,0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 4rem;
+    background: hsla(0, 0%, 100%, 0.6);
+
 }
-.main-juice__back-item.up{
-    margin-bottom:auto;
+.main-juice__back-item {
+    padding: 1rem 2rem ;
 }
-.main-juice__back-item.up dt{
-    font-size: 1.8rem;
-    color:hsla(67deg, 3%, 13%, 1);
-    border-bottom: 2px solid hsla(67deg, 4%, 13%, 1);
+/* 뒷면 위 */
+.main-juice__back-item.up {
+    height: 70%;
 }
-.main-juice__back-item.up dt span{
-    display:block;
-}
-.main-juice__back-item.up dt span:last-child{
+.main-juice__back-item.up>dt{
     padding-bottom: 2rem;
+    border-bottom: 2px solid hsla(67deg, 4%, 13%, 1);
+    font-size: 1.8rem;
+    color: hsla(67deg, 3%, 13%, 1);
+
+}
+.main-juice__back-item.up>dt>span:last-child {
     font-size: 1.4rem;
-    color:hsla(0, 0%, 45%, 1);
+    color: hsla(0, 0%, 45%, 1);
+
 }
-.main-juice__back-item.up dd{
-    padding-top:2rem;
+.main-juice__back-item.up>dt>span{
+    display: block;
+}
+.main-juice__back-item.up>dd {
+    padding-top: 2rem;
     font-size: 1.6rem;
-    color:hsla(0, 0%, 0%, 1);
+    color: hsla(0, 0%, 0%, 1);
 }
-.main-juice__back-item.down{
-    display:flex;
+/* 뒤면 아랫부분 */
+.main-juice__back-item.down {
+    display: flex;
     flex-flow: row wrap;
-    background-color: hsla(0, 0%, 97%, 1);
+    max-height: 30%;
+    overflow-y: auto;
+    background: hsla(0, 0%, 97%, 1);
     font-size: 1.3rem;
-    color:hsla(0, 0%, 0%, 1);
+    color: hsla(0, 0%, 0%, 1);
 }
 .main-juice__back-item.down dt,
-.main-juice__back-item.down dd{
-    width:25%;
-    padding-left:2rem;
-    margin:0.5rem 0;
-}
-.main-juice__back-item.down dt:nth-child(3),
-.main-juice__back-item.down dd:nth-child(4),
-.main-juice__back-item.down dt:nth-child(9),
-.main-juice__back-item.down dd:nth-child(10){
-    order:1;
-}
-/* .second-line{
-    order:1;
-} */
+.main-juice__back-item.down dd {
+    width: 25%;
+    padding-bottom: .5rem;
+    vertical-align: middle;
 
-.main-juice__back-item.down dt:nth-child(5),
-.main-juice__back-item.down dd:nth-child(6),
-.main-juice__back-item.down dt:nth-child(11),
-.main-juice__back-item.down dd:nth-child(12){
-    order:2;
 }
-/* .thrid-line{
-    order:2;
-} */
-.main-juice__back-item.down dd:nth-child(even):nth-child(-n+7){
-    border-right:1px solid hsla(0, 0%, 45%, 1);
+.main-juice__back-item.down>dt {
+    padding-left: 2rem;
 }
-.main-juice__back>button{
+/* 추가 */
+.main-juice__back-item.down>dd {
+    word-break: break-word;
+}
+.main-juice__back-item.down>:nth-child(3),
+.main-juice__back-item.down>:nth-child(4),
+.main-juice__back-item.down>:nth-child(9),
+.main-juice__back-item.down>:nth-child(10)
+{
+    order: 1;
+}
+.main-juice__back-item.down>:nth-child(5),
+.main-juice__back-item.down>:nth-child(6),
+.main-juice__back-item.down>:nth-child(11),
+.main-juice__back-item.down>:nth-child(12)
+{
+    order: 2;
+}
+
+.main-juice__back-item.down>:nth-child(2),
+.main-juice__back-item.down>:nth-child(4),
+.main-juice__back-item.down>:nth-child(6){
+    border-right: 1px solid hsla(0, 0%, 67%, 1);
+}
+
+.main-juice__back>button {
     position: absolute;
-    top:1rem;
-    right:1rem;
-    width:4rem;
-    height:4rem;
-}
-.main-juice__back-item.up,
-.main-juice__back-item.down{
-    padding:2rem;
+    top: 0;
+    right: 0;
+    padding: 1.5rem;
 }

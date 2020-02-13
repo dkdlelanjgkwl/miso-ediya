@@ -35,10 +35,15 @@ dd{
 /* 기본 문서 설정 */
 html {
     font-size: 10px;
+    
 }
 body {
     font-family: 'Noto Sans KR', sans-serif;
     color: hsla(0, 0%, 0%, 1);
+
+}
+body * {
+    box-sizing: border-box;
 }
 body *{
     box-sizing: border-box;
